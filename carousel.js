@@ -12,8 +12,10 @@ function showSlide(index) {
         slideWidth = 1120;
     } else if (carouselWidth === 900) {
         slideWidth = 900;
-    } else {
-        slideWidth = 250; // Valeur par défaut si aucune condition n'est satisfaite
+    } else if (carouselWidth === 700){
+        slideWidth = 700;
+    } else if (carouselWidth === 600) {
+        slideWidth = 600; // Valeur par défaut si aucune condition n'est satisfaite
     }
 console.log(slideWidth)
     // Boucle retour si l'index est hors limites

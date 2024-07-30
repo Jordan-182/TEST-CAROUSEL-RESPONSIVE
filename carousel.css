@@ -37,7 +37,7 @@
 .album-name{
     width: 100%;
     text-align: center;
-    margin: 10px auto;
+    margin: 15px auto;
     color: var(--primary-color);
     font-size: 1.5rem;
     font-weight: 600;
@@ -91,9 +91,11 @@
 }
 
 .album-btn{
+    position: absolute;
+    left: calc(50% - 60px);
+    bottom: 15px;
     height: 50px;
     width: 120px;
-    margin: 20px auto;
     border: 2px solid white;
     color: var(--primary-color);
     border-radius: 10px;
@@ -105,44 +107,21 @@
 }
 
 .album-btn:hover{
-    border: 2px solid var(--secondary-color);
-    color: var(--secondary-color);
-    background: lightgray;
+    border: 2px solid transparent;
+    background: var(--secondary-color);
 }
 
-.album-right h3{
+.album-right{
+    color: var(--primary-color);
+    width: 50%;
+    height: 366px;
+    display: flex;
     text-align: center;
-    color: var(--primary-color);
-    font-weight: 600;
-    font-size: 1.1rem;
-    margin-top: 15px;
-}
-
-.tracklist-container{
-    display: flex;
-    width: 100%;
-    max-width: 560px;
-}
-
-.album-right ol{
-    list-style: decimal;
-    color: var(--primary-color);
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
     align-items: center;
-    width: 100%;
-    padding: 5px;
-    margin: 20px auto;
-    height: auto;
-    max-height: calc(1.2em * 12 + 20px);
-}
-
-.album-right ol li{
-    width: fit-content;
-    padding: 2px;
-    font-size: 1rem;
-    font-weight: 600;
+    padding: 5px 50px;
+    line-height: 1.2rem;
+    margin-top: -24px;
+    margin-left: -40px;
 }
 
 .carousel-item.active{
@@ -319,5 +298,46 @@
 
     .carousel-item{
         width: 900px;
+    }
+
+    .album-right{
+        margin-left: -10px;
+    }
+}
+
+@media only screen and (max-width : 1010px) {
+    .carousel{
+        width: 700px;
+    }
+
+    .carousel-item{
+        width: 700px;
+    }
+
+    .album-left{
+        margin-left: -55px;
+    }
+
+    .album-right{
+        margin-left: 57px;
+    }
+}
+
+@media only screen and (max-width : 800px) {
+    .carousel{
+        width: 600px;
+    }
+
+    .carousel-item{
+        width: 600px;
+    }
+
+    .album-left{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .album-right{
+        display: none;
     }
 }
